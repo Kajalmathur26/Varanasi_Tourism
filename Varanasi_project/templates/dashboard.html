@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <title>Dashboard</title>
+
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #FFDAB9;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #111;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #C0C0C0;
+    }
+
+    h1 {
+      font-size: 60px;
+      text-align: center;
+      font-family: cursive;
+      color: white
+    }
+
+    body {
+      background-image: url('static/diye.jpg');
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li><a href="{{url_for('review_input')}}">Post</a></li>
+    <li><a href="{{url_for('logout')}}">Logout</a></li>
+  </ul>
+  <h1>WELCOME!</h1><br>
+  <h1>{{username}}</h1>
+
+</body>
+
+</html>

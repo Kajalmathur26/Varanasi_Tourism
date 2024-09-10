@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+      body {
+  background: linear-gradient(70deg, #e6e6e6, #f7f7f7);
+  color: #514B64;
+  min-height: 100vh;
+}
+
+code {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  margin: 0 0.3rem;
+}
+    
+       .content {
+        position: relative;
+        margin-top: 2%;
+
+        background-color: rgb(247, 228, 201);
+      }
+      .detail {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 140%;
+      }
+      
+      .grid-container1 {
+        display: grid;
+        grid-template-columns: 46% 54% ;
+        background-color: #f2e8d3;
+        padding: 10px;
+      }
+
+      .grid-item1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10%;
+        font-size: 140%;
+        height: 100%;
+        
+      }
+      h2{
+        color: rgb(223, 87, 75);
+      }
+      .voxa{
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href='/'>Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('gallery')}}">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('explore')}}">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('review')}}">Review</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              How to reach
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Aeriel route</a></li>
+              <li><a class="dropdown-item" href="#">Train route</a></li>
+              <li><a class="dropdown-item" href="#">By road</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('login')}}">Sign-in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('register')}}">Sign-up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+
+    <div class="content">
+        <div class="detail">
+            <h2>How To Reach Varanasi</h2>
+          <p>
+            Varanasi is the cultural capital of India and the melting pot of Indian civilization. Varanasi or Benaras has a well-developed transport network and is well connected to all the major Indian cities and states by air, road and rail.
+          </p>
+          <br />
+        </div>
+      </div>
+
+      <div class="grid-container1">
+        
+        <div class="grid-item1">
+            <h3>By Rail</h3>
+            <p>
+                Since Varanasi lies in the heartland of the North Indian plains, it is well connected to Delhi, Kolkata, Mumbai and other parts of India. There are two railway stations in Varanasi, the Kashi Junction and the Varanasi Junction (also known as Varanasi Cantonment). Rajdhani Express from Delhi or from Calcutta passes through Varanasi too. One can also catch trains from Mughalsarai, just 10 km south of Varanasi.
+            </p>
+          
+          
+          </div>
+
+
+          <div class="grid-item1">
+            <h3>Varanasi Railway station </h3>
+            <p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.3256606458253!2d82.98632309999999!3d25.3268509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2de6e196cbb3%3A0x1527bb81c5e30918!2sVaranasi%20Junction%20railway%20station!5e0!3m2!1sen!2sin!4v1672126630256!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+          
+          
+          </div>
+
+
+          
+      
+    
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+</html>

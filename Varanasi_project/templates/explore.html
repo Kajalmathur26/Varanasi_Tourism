@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('static/p1.jpg');
+    }
+
+    .header {
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href='/'>Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('gallery')}}">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('explore')}}">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('review')}}">Review</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              How to reach
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{url_for('reach_air')}}">Aeriel route</a></li>
+              <li><a class="dropdown-item" href="{{url_for('read_rail')}}">Train route</a></li>
+              <li><a class="dropdown-item" href="{{url_for('reach_road')}}">By road</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('login')}}">Sign-in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('register')}}">Sign-up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="header">
+    <marquee>
+      <h1 style="color:yellow">More in Varanasi City</h1>
+    </marquee>
+    <p>
+    <h5 style="color:white"> This holy city is famous for its education, culture , tradition, picnic places, diversity
+      and so on.</h5>
+
+    </p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="static/back2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bank of river Ganga</h5>
+          <p class="card-text">There are nearly 85 ghats on the bank of river Ganga . To know more about this ..<a
+              href="{{url_for('ghats')}}">Click here</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img style="height:600px; width:85%" src="static/p4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">BHU University</h5>
+          <p class="card-text">BHU is famous for its quality education across the world. To know more about this..<a
+              href="{{url_for('BHU')}}">Click here</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="'static/kashi2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Places to visit</h5>
+          <p class="card-text">place that every tourist should visit in city<a
+            href="{{url_for('card')}}"> click here</a></p>
+        </div>
+      </div>
+    </div>
+
+  <div class="col">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">To know more about city<a
+          href="https://en.wikipedia.org/wiki/Varanasi"> click here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

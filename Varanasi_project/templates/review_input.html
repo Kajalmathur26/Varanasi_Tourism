@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post</title>
+  <!-- <link rel="stylesheet" href="style_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    body {
+      background:#C0C0C0;
+      background-image: url("static/back2.jpg");
+      background-size: 100%;
+      color: bisque;
+    }
+
+    .review_box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 80%;
+      padding: 40px;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, .7);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin: 5%;
+    }
+
+    .stars {
+      width: 50%;
+      margin: 5%;
+    }
+
+    .form-outline {
+      width: 75%;
+    }
+
+    .sub {
+      margin-top: 6%;
+    }
+
+    a {
+      margin-left: 30px;
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 10%px;
+      letter-spacing: 4px
+    }
+
+    a:hover {
+      background: #f29c06f9;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #b27306f9,
+        0 0 25px #b27306f9,
+        0 0 50px #b27306f9,
+        0 0 100px #b27306f9;
+    }
+  </style>
+</head>
+
+<body>
+  <a href='{{url_for("dashboard")}}' class="btn btn-dark">Back</a>
+  <br>
+  <form action="/review_input" method="POST">
+    <div class="review_box">
+    </ul>{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul style="text-align:center">
+      <li>
+        <div class="alert alert-success" role="alert">
+          {{messages[0]}}
+        </div>
+      </li>
+    </ul>
+    {% endif %}
+    {% endwith %}
+      <h1>Please rate our website</h1>
+
+      <div class="stars">
+        <div class="form-group">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select stars ratings</option>
+            <option value="1">1⭐</option>
+            <option value="2">2⭐⭐</option>
+            <option value="3">3⭐⭐⭐</option>
+            <option value="4">4⭐⭐⭐⭐</option>
+            <option value="5">5⭐⭐⭐⭐⭐</option>
+          </select>
+        </div>
+      </div>
+      <h5>Message</h5>
+      <div class="form-outline">
+        <label class="form-label" for="textAreaExample">Your thought</label>
+        <textarea class="form-control" id="textAreaExample" name="message" rows="4"></textarea>
+        <br>
+        <label for="formFileMultiple" class="form-label">Share your memories...</label>
+        <input class="form-control" type="file" name="file" id="formFileMultiple" multiple />
+      </div>
+      <center>
+        <div class="sub">
+          <input type="submit" value="Post">
+        </div>
+
+      </center>
+
+    </div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
